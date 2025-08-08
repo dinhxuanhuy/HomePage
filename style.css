@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family : 'Playfair Display', 'Roboto', sans-serif;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+/* Header */
+header {
+  background-color: #2974ed;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 50px;
+  color: white;
+  animation: 1.8s appear;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  animation: slide-down 1.8s ease-in forwards;
+  font-weight: bold;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  animation : 1.8s 
+}
+.nav-links >ul > li {
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s;
+}
+
+.Profile{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    display : flex;
+    flex-direction: row ;
+    gap : 0;
+    animation: 3s slide-up;
+}
+.Profile img{
+    flex : 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+.Profile-description{
+    margin : 0 auto;
+    flex : 2;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Project-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin : 0;
+  padding: 0;
+  max-width: 800px;
+}
+svg {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.Project-list > ul > li {
+  list-style: none;
+  padding: 20px;
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+.Project-list >ul>li >div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+.Project-list >ul>li >div >button {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.Project-list >ul>li >div >button:hover {
+  background-color: #D1D5DC;
+  color : black
+}
+
+/* KEYFRAMES */
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear-background-change {
+  from {
+    background-color: white;
+    opacity: 0;
+  }
+  to {
+    background-color: #f7f7f7;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
